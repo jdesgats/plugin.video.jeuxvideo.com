@@ -12,9 +12,12 @@
     <language>fr</language>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <source>http://github.com/jdesgats/plugin.video.jeuxvideo.com</source>
-    <email>contact at mille337 dot net</email>
-    <summary>Vidéos de JeuxVidéo.com</summary>
-    <description>Cette extension permet de lire en streaming les vidéos de JeuxVidéo.com (Gaming Live, chroniques, ...).</description>
-    <disclaimer>Cette extension n'est ni publiée ni soutenue par JeuxVideo.com.</disclaimer>
+    <email></email>
+    <summary lang="en">JeuxVideo.com streaming videos</summary>
+    <description lang="en">This extension can play streaming videos from the French website JeuxVideo.com.</description>
+    <disclaimer lang="en">This extension is not published nor endorsed by JeuxVideo.com.</disclaimer>
+    <summary lang="fr">Accès aux vidéos de JeuxVideo.com</summary>
+    <description lang="fr">Cette extension permet de lire en streaming les vidéos de JeuxVideo.com (Gaming Live, chroniques, ...).</description>
+    <disclaimer lang="fr">Cette extension n'est ni publiée ni soutenue par JeuxVideo.com.</disclaimer>
   </extension>
 </addon>
