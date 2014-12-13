@@ -135,7 +135,7 @@ def video_list(category, machine):
             'plot': v.desc,
         },
         'path': select_url(v.urls),
-        'context_menu': [ ( plugin.get_string(30005) % res, 'PlayMedia(%r)' % v.urls[i] ) for i, res in enumerate(RESOLUTIONS) ],
+        'context_menu': [ ( plugin.get_string(30005) % res, 'PlayMedia(%s)' % v.urls[i] ) for i, res in enumerate(RESOLUTIONS) ],
         'is_playable': True
     } for v in videos ]
 
