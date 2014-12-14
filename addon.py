@@ -33,7 +33,7 @@ def call_ws(url):
         return ET.parse(handle)
 
 Machine = collections.namedtuple('Machine', [ 'id', 'name', 'icon' ])
-Video = collections.namedtuple('Video', [ 'title', 'desc', 'date', 'length', 'machines', 'thumbnail', 'urls' ])
+Video = collections.namedtuple('Video', [ 'title', 'type', 'desc', 'date', 'length', 'machines', 'thumbnail', 'urls' ])
 
 def safe_find(element, match, default=None):
     ''' Used to provide a default value for non-essentials elements. '''
@@ -61,6 +61,7 @@ def get_videos(category):
 
     return [ Video(
         title     = v.find('titre').text,
+        type      = safe_find(v, 'type'),
         desc      = safe_find(v, 'resume'),
         date      = safe_strptime(safe_find(v, 'date', '01/01/2000'), '%d/%m/%Y'),
         length    = parse_length(safe_find(v, 'duree', '0:00')),
@@ -127,7 +128,7 @@ def video_list(category, machine):
     if machine != 'all':
         videos = filter(lambda v: machine in v.machines, videos)
     return [ {
-        'label': v.title,
+        'label': '[%s] %s' % (v.type, v.title) if v.type else v.title,
         'thumbnail': v.thumbnail,
         'stream_info': { 'video': { 'duration': v.length } },
         'info': {
