@@ -69,9 +69,9 @@ def get_videos(category):
         thumbnail = safe_find(v, 'url_image'),
         urls      = [
             safe_find(v, 'url_expanded'),
-            safe_find(v, 'url_expanded400'),
-            safe_find(v, 'url_expanded720'),
-            safe_find(v, 'url_expanded1080'),
+            safe_find(v, 'url_expanded_400'),
+            safe_find(v, 'url_expanded_720'),
+            safe_find(v, 'url_expanded_1080'),
         ]
     ) for v in videos ]
 
