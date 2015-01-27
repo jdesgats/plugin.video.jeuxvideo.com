@@ -5,7 +5,7 @@ import operator
 import time
 import xml.etree.ElementTree as ET
 from datetime import datetime
-from xbmcswift2 import Plugin
+from xbmcswift2 import Plugin, xbmcgui
 
 plugin = Plugin()
 
@@ -139,6 +139,11 @@ def video_list(category, machine):
         'context_menu': [ ( plugin.get_string(30005) % res, 'PlayMedia(%s)' % v.urls[i] ) for i, res in enumerate(RESOLUTIONS) ],
         'is_playable': True
     } for v in videos ]
+
+@plugin.route('/clear_cache')
+def clear_cache():
+    plugin.clear_function_cache()
+    xbmcgui.Dialog().ok(plugin.get_string(30000), plugin.get_string(30104))
 
 if __name__ == '__main__':
     plugin.run()
