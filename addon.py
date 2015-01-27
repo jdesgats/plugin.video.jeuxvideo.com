@@ -55,7 +55,7 @@ def get_machines():
     machines = call_ws(WS_MACHINES).findall('./machine')
     return [ Machine(m.find('id').text, m.find('nom').text, safe_find(m, 'url_icone')) for m in machines ]
 
-@plugin.cached(30)
+@plugin.cached(5)
 def get_videos(category):
     videos = call_ws(WS_CATEGORIES[category]).findall('./video')
 
