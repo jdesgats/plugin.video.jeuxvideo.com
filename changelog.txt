@@ -1,4 +1,6 @@
 v???
+- Fixé: certaines vidéos ne pouvaient pas être lues (les miniatures étaint
+  absentes aussi)
 - Fixé: le label 'Android' n'apparaissait pas
 
 v1.2.0 (26/03/2016)
