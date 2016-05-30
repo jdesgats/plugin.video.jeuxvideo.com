@@ -1,3 +1,6 @@
+v???
+- Fixé: le label 'Android' n'apparaissait pas
+
 v1.2.0 (26/03/2016)
 - Fixé: utilise les flux RSS comme source, l'ancienne API a été supprimée
   (merci à Celedhrim)

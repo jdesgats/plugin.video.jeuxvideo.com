@@ -135,7 +135,7 @@ def index():
         'label': plugin.get_string(30212),
         'path': plugin.url_for('category_index', category='iphone'),
     }, {
-        'label': plugin.get_string(30013),
+        'label': plugin.get_string(30213),
         'path': plugin.url_for('category_index', category='android'),
     } ]
 
